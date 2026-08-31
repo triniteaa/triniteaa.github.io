@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            background-image: url(./images/bg_image.png);
+            background-size: cover;
+            background-position: no-repeat;
+            height: 40vh;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header_nav {
+            margin-bottom: 30px;
+        }
+        .header_nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .header_nav a:hover {
+            opacity: 0.8;
+        }
+        .header_text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header_text p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="header_nav">
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="./fall2026/lesson2/labs/lab2/">lab2</a>
+        </nav>
+        <div class="header_text">
+            <h1>Welcome to My First Web Page</h1>
+            <p>Building beautiful, functional, and modern websites from scratch.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <div id="about" class="about">
+            <div class="my_image">
+                <img src="https://picsum.photos" alt="Profile placeholder image">
+            </div>
+            <div class="about_me">
+                <h2>About Me</h2>
+                <p>Hello! I am an aspiring web developer learning the fundamentals of frontend engineering. This layout is structured using semantic HTML5 elements to structure content cleanly and make it highly accessible.</p>
+                <p style="margin-top: 10px;">I specialize in crafting layouts using HTML, CSS, and modern web methodologies. Explore the project to see what I can build!</p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="contact">
+            <div class="map">
+                <h2>Our Location</h2>
+                <!-- Embedded OpenStreetMap iframe -->
+           
+            </div>
+            
+            <div class="contact_form">
+                <h2>Get In Touch</h2>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent simulated successfully!');">
+                    <div class="form_group">
+                        <label Brittleness for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form_group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form_group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+<footer>
+        <div class="footer">
+            <div class="footer_col">
+                <h4>About Us</h4>
+                <p>Dedicated to teaching and building clean modern applications for users all over the world.</p>
+            </div>
+            <div class="footer_col">
+                <h4>Quick Links</h4>
+                <a href="#about">Biography</a>
+                <a href="#contact">Find Us</a>
+                <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools Tutorial</a>
+            </div>
+            <div class="footer_col">
+                <h4>Contact Info</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (555) 019-2834</p>
+            </div>
+            <div class="social_icons footer_col">
+                <h4>Follow Me</h4>
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
