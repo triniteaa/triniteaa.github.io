@@ -1,136 +1,101 @@
 <!DOCTYPE html>
+<!--
+    Trinity Hogges
+    September 16th, 2026
+    ./fall2026/lesson5/labs/lab2/index.html
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>Wild Rescues: Home</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-    * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        /* Header & Navigation */
-        header {
-            background: linear-gradient(135deg, #1abc9c, #16a085);
-            background-image: url(./images/bg_image.png);
-            background-size: cover;
-            background-position: no-repeat;
-            height: 40vh;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .header_nav {
-            margin-bottom: 30px;
-        }
-        .header_nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: opacity 0.3s;
-        }
-        .header_nav a:hover {
-            opacity: 0.8;
-        }
-        .header_text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        .header_text p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav class="header_nav">
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="./fall2026/lesson2/labs/lab2/">lab2</a>
+
+    <div id="container">
+        <header>
+            <h1>🐾 Wild Rescues</h1>
+            <h3>Rescue &nbsp;&#9672;&nbsp; Rehabilitate &nbsp;&#9672;&nbsp; Release</h3>
+            <a href="index.html">
+                <img src="images/Wild-Rescue-logo.jpg" alt="Wild Rescues logo" class="round" width="297" height="220">
+        </header>
+
+        <nav>
+            <p>
+                <a href="index.html">Home</a> &nbsp;&#9672;&nbsp; 
+                <a href="about.html">About Us</a> &nbsp;&#9672;&nbsp; 
+                <a href="partnership.html">Partnership</a> &nbsp;&#9672;&nbsp; 
+                <a href="gallery.html">Gallery</a> &nbsp;&#9672;&nbsp; 
+                <a href="faqs.html">FAQs</a> &nbsp;&#9672;&nbsp; 
+                <a href="contact.html">Contact Us</a>
+            </p>
         </nav>
-        <div class="header_text">
-            <h1>Welcome to My First Web Page</h1>
-            <p>Building beautiful, functional, and modern websites from scratch.</p>
-        </div>
-    </header>
 
-    <main>
-        <!-- About Section -->
-        <div id="about" class="about">
-            <div class="my_image">
-                <img src="https://picsum.photos" alt="Profile placeholder image">
+        <!-- Main Content Area -->
+        <main>
+            <div id="welcome">
+                <h2>Welcome to Wild Rescues</h2>
+                <!-- Using your provided image here -->
+                <img src="images/people-with-animals.jpeg" alt="Volunteers caring for animals" class="round" width="297" height="220">
+                <p>Welcome to Wild Rescues. Our mission is to rescue, rehabilitate, and release wildlife back into their natural environment. We are a nonprofit organization dedicated to helping injured wildlife.</p>
+                <p>Our staff provides around-the-clock care for wildlife in need. We also provide long-term care for wildlife that cannot be released back into their natural environment.</p>
+                <p>Will you partner with us? We need caring volunteers to help care for our animals. You can also donate, become a member, or become a sponsor. <a href="contact.html">Contact us today.</a></p>
             </div>
-            <div class="about_me">
-                <h2>About Me</h2>
-                <p>Hello! I am an aspiring web developer learning the fundamentals of frontend engineering. This layout is structured using semantic HTML5 elements to structure content cleanly and make it highly accessible.</p>
-                <p style="margin-top: 10px;">I specialize in crafting layouts using HTML, CSS, and modern web methodologies. Explore the project to see what I can build!</p>
-            </div>
-        </div>
 
-        <!-- Contact Section -->
-        <div id="contact" class="contact">
-            <div class="map">
-                <h2>Our Location</h2>
-                <!-- Embedded OpenStreetMap iframe -->
-           
+            <div id="animals">
+                <h2>Animals</h2>
+                <p>Our rescue center features dedicated care enclosures tailored to native species. Support animal recovery and prepare wildlife for release back into their natural habitat.</p>
+                <ul>
+                    <li>Cats</li>
+                    <li>Dogs</li>
+                    <li>Bunnies</li>
+                </ul>
             </div>
-            
-            <div class="contact_form">
-                <h2>Get In Touch</h2>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent simulated successfully!');">
-                    <div class="form_group">
-                        <label Brittleness for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form_group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                    </div>
-                    <div class="form_group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
-                    </div>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </main>
 
-<footer>
-        <div class="footer">
-            <div class="footer_col">
-                <h4>About Us</h4>
-                <p>Dedicated to teaching and building clean modern applications for users all over the world.</p>
+            <div id="volunteer">
+                <h2>Volunteer Program</h2>
+                <!-- Using your second provided image here -->
+                <img src="images/volunteers-with-animals.jpeg" alt="Volunteers caring for animals" class="round">
+                <p>Our dedicated volunteers work directly alongside experienced staff to help care for rescued animals, assist with daily feedings, and maintain safe habitats.</p>
+                <ul>
+                    <li>Hands-On Experience</li>
+                    <li>Flexible Scheduling</li>
+                    <li>Community Impact</li>
+                </ul>
             </div>
-            <div class="footer_col">
-                <h4>Quick Links</h4>
-                <a href="#about">Biography</a>
-                <a href="#contact">Find Us</a>
-                <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools Tutorial</a>
+
+            <div id="latest">
+                <h2>Latest Rescues</h2>
+                <p>The following are recent animals brought into our care that are currently undergoing rehabilitation.</p>
+                <dl>
+                    <dt><strong>Baby Fawns</strong></dt>
+                    <dd>Fawns require specialized formula feedings every few hours and secure outdoor enclosures to practice running and building muscle strength before release.</dd>
+
+                    <dt><strong>Red-Tailed Hawk</strong></dt>
+                    <dd>Birds of prey are monitored in large flight cages to evaluate wing healing, flight stability, and hunting readiness.</dd>
+
+                    <dt><strong>Orphaned Raccoons</strong></dt>
+                    <dd>Young raccoons are housed in social groups to develop critical foraging skills, climbing agility, and healthy wild behaviors.</dd>
+                </dl>
+                <p>For more information on wildlife conservation and local laws, visit <a href="https://www.fws.gov" target="_blank" rel="noopener">fws.gov</a>.</p>
             </div>
-            <div class="footer_col">
-                <h4>Contact Info</h4>
-                <p>Email: info@example.com</p>
-                <p>Phone: +1 (555) 019-2834</p>
+
+            <div id="contact">
+                <h2>Ready to get started? Contact us today.</h2>
+                <p><strong>Call us:</strong> (814) 555-9608</p>
+                <p><strong>Email us:</strong> <a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+                <p><strong>Visit us at:</strong> 1275 Channel Center Street, Boston, MA 02210</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.8475220379895!2d-71.05423858454425!3d42.34575897918797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a7dc38a8e1b%3A0x6b447a16df5f1ef1!2s1275%20Channel%20Center%20St%20%231%2C%20Boston%2C%20MA%2002210!5e0!3m2!1sen!2sus!4v1630000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="social_icons footer_col">
-                <h4>Follow Me</h4>
-                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-            </div>
-        </div>
-    </footer>
-    
+        </main>
+
+        <footer>
+            <p>&copy; Copyright 2021. All Rights Reserved.</p>
+            <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
