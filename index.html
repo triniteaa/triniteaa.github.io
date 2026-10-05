@@ -1,95 +1,136 @@
 <!DOCTYPE html>
-<!--
-    Trinity Hogges
-    September 16th, 2026
-    ./fall2026/lesson5/labs/lab2/index.html
--->
 <html lang="en">
 <head>
-    <title>Wild Rescues: Home</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    <style>
+    * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            background-image: url(./images/bg_image.png);
+            background-size: cover;
+            background-position: no-repeat;
+            height: 40vh;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .header_nav {
+            margin-bottom: 30px;
+        }
+        .header_nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .header_nav a:hover {
+            opacity: 0.8;
+        }
+        .header_text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .header_text p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <nav class="header_nav">
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="./fall2026/lesson5/labs/lab2/index.html">Lab 2</a>
+</nav>
+        <div class="header_text">
+            <h1>Welcome to My First Web Page</h1>
+            <p>Building beautiful, functional, and modern websites from scratch.</p>
+        </div>
+    </header>
 
-    <div id="container">
-        <header>
-            <h1>🐾 Wild Rescues</h1>
-            <h3>Rescue &nbsp;&#9672;&nbsp; Rehabilitate &nbsp;&#9672;&nbsp; Release</h3>
-        </header>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="partnership.html">Partnership</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-
-        <main>
-            <div id="welcome">
-                <h2>Welcome to Wild Rescues</h2>
-                <img src="images/people-with-animals.jpeg" alt="Volunteers caring for animals" class="round">
-                <p>Welcome to Wild Rescues. Our mission is to rescue, rehabilitate, and release wildlife back into their natural environment. We are a nonprofit organization dedicated to helping injured wildlife.</p>
-                <p>Our staff provides around-the-clock care for wildlife in need. We also provide long-term care for wildlife that cannot be released back into their natural environment.</p>
-                <p>Will you partner with us? We need caring volunteers to help care for our animals. You can also donate, become a member, or become a sponsor.</p>
+    <main>
+        <!-- About Section -->
+        <div id="about" class="about">
+            <div class="my_image">
+                <img src="https://picsum.photos" alt="Profile placeholder image">
             </div>
+            <div class="about_me">
+                <h2>About Me</h2>
+                <p>Hello! I am an aspiring web developer learning.This layout is structured using semantic HTML5 elements to structure content cleanly and make it highly accessible.</p>
+                <p style="margin-top: 10px;">I specialize in crafting layouts using HTML, CSS, and modern web methodologies. Explore the project to see what I can build!</p>
+            </div>
+        </div>
 
-            <div id="contact">
-                <h2>Ready to get started? Contact us today.</h2>
-                
-                <form action="thanks.html" method="post">
-                    <fieldset>
-                        <legend>Contact Information</legend>
-
-                        <label for="fname">First Name:</label>
-                        <input type="text" id="fname" name="fname" required>
-
-                        <label for="lname">Last Name:</label>
-                        <input type="text" id="lname" name="lname" required>
-
-                        <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone">
-
-                        <label for="interest">Area of Interest:</label>
-                        <select id="interest" name="interest">
-                            <option value="general">General Inquiry</option>
-                            <option value="volunteer">Volunteering</option>
-                            <option value="donate">Donations & Sponsorship</option>
-                            <option value="report">Report Injured Wildlife</option>
-                        </select>
-
-                        <label for="comments">Comments or Questions:</label>
-                        <textarea id="comments" name="comments" rows="5"></textarea>
-                    </fieldset>
-
-                    <input type="submit" id="submit" value="Submit">
+        <!-- Contact Section -->
+        <div id="contact" class="contact">
+            <div class="map">
+                <h2>Our Location</h2>
+                <!-- Embedded OpenStreetMap iframe -->
+           
+            </div>
+            
+            <div class="contact_form">
+                <h2>Get In Touch</h2>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent simulated successfully!');">
+                    <div class="form_group">
+                        <label Brittleness for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form_group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form_group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
                 </form>
-
-                <p><strong>Call us:</strong> (814) 555-9608</p>
-                <p><strong>Email us:</strong> <a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
-                <p><strong>Visit us at:</strong> 1275 Channel Center Street, Boston, MA 02210</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.8475220379895!2d-71.05423858454425!3d42.34575897918797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a7dc38a8e1b%3A0x6b447a16df5f1ef1!2s1275%20Channel%20Center%20St%20%231%2C%20Boston%2C%20MA%2002210!5e0!3m2!1sen!2sus!4v1630000000000!5m2!1sen!2sus" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <p>&copy; Copyright 2021. All Rights Reserved.</p>
-            <p><a href="mailto:contact@wildrescues.net">contact@wildrescues.net</a></p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
-    </div>
-
+<footer>
+        <div class="footer">
+            <div class="footer_col">
+                <h4>About Us</h4>
+                <p>Dedicated to teaching and building clean modern applications for users all over the world.</p>
+            </div>
+            <div class="footer_col">
+                <h4>Quick Links</h4>
+                <a href="#about">Biography</a>
+                <a href="#contact">Find Us</a>
+                <a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools Tutorial</a>
+            </div>
+            <div class="footer_col">
+                <h4>Contact Info</h4>
+                <p>Email: info@example.com</p>
+                <p>Phone: +1 (555) 019-2834</p>
+            </div>
+            <div class="social_icons footer_col">
+                <h4>Follow Me</h4>
+                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>
