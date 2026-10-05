@@ -86,33 +86,60 @@ main p {
     margin-bottom: 1rem;
 }
 
-main ul, main dl {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem 0;
 }
 
-main dt {
-    margin-top: 0.5rem;
+form fieldset {
+    border: 2px solid #22130c;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+form legend {
     font-weight: bold;
-}
-
-main a {
     color: #22130c;
+    padding: 0 0.5rem;
+}
+
+form label {
+    display: block;
+    margin-top: 0.75rem;
     font-weight: bold;
 }
 
-img.round {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #22130c;
+    border-radius: 4px;
+    font-family: inherit;
 }
 
-iframe {
-    width: 100%;
-    margin-top: 1rem;
-    border-radius: 8px;
+form input[type="submit"] {
+    background-color: #22130c;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+form input[type="submit"]:hover {
+    background-color: #3d2317;
+    color: #d1c0a5;
 }
 
 footer {
@@ -152,11 +179,5 @@ footer a:hover {
     nav a {
         font-size: 1rem;
         padding: 1rem 0.5rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    #contact, #welcome {
-        width: 100%;
     }
 }
