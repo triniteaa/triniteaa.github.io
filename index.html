@@ -1,15 +1,22 @@
 <!DOCTYPE html>
+<!--
+    Student Name: Trinity Hogges
+    File Name: index.html
+    Description: Homepage
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My first Webpage</title>
     <style>
-    * {
+        
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
@@ -20,76 +27,282 @@
         /* Header & Navigation */
         header {
             background: linear-gradient(135deg, #1abc9c, #16a085);
-            background-image: url(./images/bg_image.png);
+            background-image: url('./images/bg_image.png');
             background-size: cover;
-            background-position: no-repeat;
-            height: 40vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 40vh;
             color: white;
             padding: 40px 20px;
             text-align: center;
         }
+
         .header_nav {
             margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
+
         .header_nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             transition: opacity 0.3s;
+            padding: 8px 12px;
         }
+
         .header_nav a:hover {
             opacity: 0.8;
+            text-decoration: underline;
         }
+
+        /* Dropdown Container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Trigger Button */
+        .dropbtn {
+            background: transparent;
+            color: white;
+            padding: 8px 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .dropbtn:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 6px;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        /* Links Inside the Dropdown */
+        .dropdown-content a {
+            color: #333333;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #1abc9c;
+            color: white;
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        /* Show the Dropdown Menu on Hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .header_text h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
         }
+
         .header_text p {
             font-size: 1.2rem;
             opacity: 0.9;
         }
+
+        /* Main Container Layout */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* About Section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .my_image img {
+            max-width: 200px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .about_me {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .about_me h2 {
+            margin-bottom: 15px;
+            color: #16a085;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+
+        .contact_form h2 {
+            margin-bottom: 20px;
+            color: #16a085;
+        }
+
+        .form_group {
+            margin-bottom: 15px;
+        }
+
+        .form_group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form_group input,
+        .form_group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .form_group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #16a085;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .footer_col {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer_col h4 {
+            margin-bottom: 15px;
+            color: #1abc9c;
+        }
+
+        .footer_col a {
+            display: block;
+            color: #ecf0f1;
+            text-decoration: none;
+            margin-bottom: 8px;
+        }
+
+        .footer_col a:hover {
+            color: #1abc9c;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav class="header_nav">
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="./fall2026/lesson5/labs/lab2/index.html">Lab 2</a>
-</nav>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            
+            <!-- Lessons Dropdown -->
+            <div class="dropdown">
+                <button class="dropbtn">Lessons &#9660;</button>
+                <div class="dropdown-content">
+                    <a href="./fall2026/lesson1/labs/lab2/index.html">Lesson 1</a>
+                    <a href="./fall2026/lesson2/labs/lab2/index.html">Lesson 2</a>
+                    <a href="./fall2026/lesson3/labs/lab2/index.html">Lesson 3</a>
+                    <a href="./fall2026/lesson4/labs/lab2/index.html">Lesson 4</a>
+                    <a href="./fall2026/lesson5/labs/lab2/index.html">Lesson 5</a>
+                </div>
+            </div>
+        </nav>
+
         <div class="header_text">
-            <h1>Welcome to My First Web Page</h1>
+            <h1>Welcome to My Web Development Portfolio</h1>
             <p>Building beautiful, functional, and modern websites from scratch.</p>
         </div>
     </header>
 
     <main>
         <!-- About Section -->
-        <div id="about" class="about">
+        <section id="about" class="about">
             <div class="my_image">
-                <img src="https://picsum.photos" alt="Profile placeholder image">
+                <img src="https://picsum.photos/200" alt="Profile placeholder image">
             </div>
             <div class="about_me">
                 <h2>About Me</h2>
-                <p>Hello! I am an aspiring web developer learning.This layout is structured using semantic HTML5 elements to structure content cleanly and make it highly accessible.</p>
-                <p style="margin-top: 10px;">I specialize in crafting layouts using HTML, CSS, and modern web methodologies. Explore the project to see what I can build!</p>
+                <p>Hello! I am an aspiring web developer learning the fundamentals of frontend engineering. This layout is structured using semantic HTML5 elements to keep content clean and accessible.</p>
+                <p style="margin-top: 10px;">I specialize in crafting layouts using HTML, CSS, and modern web methodologies. Explore the project links above to view my completed coursework!</p>
             </div>
-        </div>
+        </section>
 
         <!-- Contact Section -->
-        <div id="contact" class="contact">
-            <div class="map">
-                <h2>Our Location</h2>
-                <!-- Embedded OpenStreetMap iframe -->
-           
-            </div>
-            
+        <section id="contact" class="contact">
             <div class="contact_form">
                 <h2>Get In Touch</h2>
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent simulated successfully!');">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
                     <div class="form_group">
-                        <label Brittleness for="name">Name</label>
+                        <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Your Name">
                     </div>
                     <div class="form_group">
@@ -103,14 +316,14 @@
                     <button type="submit">Send Message</button>
                 </form>
             </div>
-        </div>
+        </section>
     </main>
 
-<footer>
+    <footer>
         <div class="footer">
             <div class="footer_col">
                 <h4>About Us</h4>
-                <p>Dedicated to teaching and building clean modern applications for users all over the world.</p>
+                <p>Dedicated to learning and building clean, modern applications.</p>
             </div>
             <div class="footer_col">
                 <h4>Quick Links</h4>
@@ -120,17 +333,16 @@
             </div>
             <div class="footer_col">
                 <h4>Contact Info</h4>
-                <p>Email: info@example.com</p>
+                <p>Email: contact@gg7126586@gmail.com</p>
                 <p>Phone: +1 (555) 019-2834</p>
             </div>
             <div class="social_icons footer_col">
                 <h4>Follow Me</h4>
                 <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+                <a href="https://Instagram.com" target="_blank" rel="noopener">Instagram</a>
             </div>
         </div>
     </footer>
-    
+
 </body>
 </html>
