@@ -1,0 +1,65 @@
+/* Reset and Body Setup */
+body {
+    background-color: #f4f1ea;
+    color: #2b2b2b;
+    font-family: Arial, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #2a5235;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header h3 {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #1e3d27;
+    text-align: center;
+    padding: 0.75rem 0;
+}
+
+nav a {
+    color: #ffc0c0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+nav a:hover {
+    color: #d4e157;
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2a5235;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffffff;
+}
