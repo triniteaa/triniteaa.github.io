@@ -1,0 +1,25 @@
+.bg-brown {
+    background-color: #2a1f14;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.welcome {
+    position: relative;
+    top: 40%;
+}
+
+.display-1 {
+    font-size: 4em;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 500px;
+    }
+}
