@@ -3,10 +3,10 @@
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-image.jpg');
+    background-image: url('../images/hero-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
 }
 
 .welcome {
@@ -16,10 +16,4 @@
 
 .display-1 {
     font-size: 4em;
-}
-
-@media (min-width: 768px) {
-    .hero {
-        height: 500px;
-    }
 }
